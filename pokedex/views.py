@@ -19,7 +19,7 @@ def index(request):
         'pokemons': pokemons,
         'trainers': trainers,    
         }
-    return HttpResponse(template.render({'pokemons': pokemons}, request))
+    return HttpResponse(template.render({'pokemons': pokemons,'trainers':trainers,}, request))
 
 def pokemon(request, pokemon_id):
     ##SELECT * FROM POKEDEX_POKEMON WHERE id=pokemon_id
